@@ -3,10 +3,14 @@ import "../Slides.css";
 
 export default function Home() {
   return (
-    <header className="App-header">
+    <div className="App-header">
       <p>
         <Slides />
       </p>
-    </header>
+      <p className="slogan">
+        "Quand la tradition rencontre la modernité. <br />
+        Toute une palette de saveurs à portée de click !"
+      </p>
+    </div>
   );
 }
