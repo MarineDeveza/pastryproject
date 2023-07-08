@@ -10,7 +10,7 @@
     position: absolute;
     top: 30px;
     left: 44px;
-    width: 20rem;
+    width: 15rem;
   }
 }
 
@@ -18,8 +18,7 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 8rem;
-
+  margin-top: 2rem;
   height: 8rem;
   width: 78vw;
   list-style: none;
@@ -30,4 +29,5 @@ ul {
 a {
   text-decoration: none;
   font-weight: bold;
+  color: rgb(61, 54, 60);
 }
