@@ -31,3 +31,10 @@ a {
   font-weight: bold;
   color: rgb(61, 54, 60);
 }
+
+.slogan {
+  color: rgb(61, 54, 60);
+  font-weight: bold;
+  font-style: italic;
+  margin-top: -5rem;
+}
