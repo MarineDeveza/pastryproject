@@ -1,0 +1,33 @@
+.top-header {
+  background-color: rgb(61, 54, 60);
+  height: 10rem;
+}
+
+.bottom-header {
+  display: flex;
+  flex-direction: row;
+  .img-logo {
+    position: absolute;
+    top: 30px;
+    left: 44px;
+    width: 20rem;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8rem;
+
+  height: 8rem;
+  width: 78vw;
+  list-style: none;
+  border-bottom: 3px solid rgb(61, 54, 60);
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
