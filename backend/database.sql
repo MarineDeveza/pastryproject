@@ -5,74 +5,52 @@ CREATE TABLE item (
 
 INSERT INTO item (title) VALUES ('Stuff'), ('Doodads');
 
-CREATE TABLE
-    categories (
-        id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        category VARCHAR(255) NOT NULL
-    ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE TABLE categories (
+  id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  category VARCHAR(255) NOT NULL
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-CREATE TABLE
-    images (
-        id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        src VARCHAR(255) NOT NULL,
-        description VARCHAR(255) NOT NULL
-    ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE TABLE images (
+  id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  src VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-CREATE TABLE
-    users (
-        id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        email VARCHAR(255) NOT NULL UNIQUE KEY,
-        password VARCHAR(255) NOT NULL,
-        firstname VARCHAR(255),
-        lastname VARCHAR(255),
-        role INT(1) NOT NULL DEFAULT (0),
-        created DATETIME NOT NULL DEFAULT NOW()
-    ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE TABLE users (
+  id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  email VARCHAR(255) NOT NULL UNIQUE KEY,
+  password VARCHAR(255) NOT NULL,
+  firstname VARCHAR(255),
+  lastname VARCHAR(255),
+  role INT(1) NOT NULL DEFAULT (0),
+  created DATETIME NOT NULL DEFAULT NOW()
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-CREATE TABLE
-    pastries (
-        id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        category_id INT UNSIGNED,
-        image_id INT UNSIGNED NOT NULL,
-        reference VARCHAR(255) NOT NULL UNIQUE KEY,
-        title TEXT NOT NULL,
-        sizes VARCHAR(255),
-        story TEXT,
-        CONSTRAINT fk_pastries_categories FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL ON UPDATE NO ACTION,
-        CONSTRAINT fk_pastries_images FOREIGN KEY (image_id) REFERENCES images(id) ON DELETE CASCADE ON UPDATE NO ACTION
-    ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE TABLE pastries (
+  id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  category_id INT UNSIGNED,
+  image_id INT UNSIGNED NOT NULL,
+  reference VARCHAR(255) NOT NULL UNIQUE KEY,
+  title TEXT NOT NULL,
+  sizes VARCHAR(255),
+  story TEXT,
+  CONSTRAINT fk_pastries_categories FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL ON UPDATE NO ACTION,
+  CONSTRAINT fk_pastries_images FOREIGN KEY (image_id) REFERENCES images(id) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-CREATE TABLE
-    favourites (
-        user_id INT UNSIGNED NOT NULL,
-        pastry_id INT UNSIGNED NOT NULL,
-        CONSTRAINT pk_favourites PRIMARY KEY (user_id, pastry_id),
-        CONSTRAINT fk_favourites_users FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE NO ACTION,
-        CONSTRAINT fk_favourites_pastries FOREIGN KEY (pastry_id) REFERENCES pastries(id) ON DELETE CASCADE ON UPDATE NO ACTION
-    ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE TABLE favourites (
+  user_id INT UNSIGNED NOT NULL,
+  pastry_id INT UNSIGNED NOT NULL,
+  CONSTRAINT pk_favourites PRIMARY KEY (user_id, pastry_id),
+  CONSTRAINT fk_favourites_users FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE NO ACTION,
+  CONSTRAINT fk_favourites_pastries FOREIGN KEY (pastry_id) REFERENCES pastries(id) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-    INSERT INTO categories (category) VALUES
-    ('Tout chocolat'),
-    ('Diététique'),
-    ('Aux fruits'),
-    ('Traditionnel'); 
+INSERT INTO categories (category) VALUES ('Tout chocolat'), ('Diététique'), ('Aux fruits'), ('Traditionnel'); 
 
-    INSERT INTO users (email, password, firstname, lastname, role) VALUES
-    (
-        'toto.tata@example.com',
-        'totoettata',
-        'Toto',
-        'Tata',
-        1
-    ),
-    (
-        'jo.do@example.com',
-        'joetdo',
-        'Jo',
-        'Do',
-        0
-    ),
-   INSERT INTO images (src, description) VALUES
+INSERT INTO users (email, password, firstname, lastname, role) VALUES ('toto.tata@example.com', 'totoettata', 'Toto', 'Tata', 1), ('jo.do@example.com', 'joetdo', 'Jo', 'Do', 0);
+
+INSERT INTO images (src, description) VALUES
     (
         'chocolatecake1.jpg',
         'Les trois chocolats'
@@ -122,7 +100,7 @@ CREATE TABLE
         'La gourmandise authentique'
     );
 
-    INSERT INTO pastries (category_id, image_id, reference, title, sizes, story) VALUES
+INSERT INTO pastries (category_id, image_id, reference, title, sizes, story) VALUES
     (
         1,
         1,
