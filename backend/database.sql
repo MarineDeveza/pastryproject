@@ -53,99 +53,15 @@ INSERT INTO users (email, password, firstname, lastname, role) VALUES ('toto.tat
 INSERT INTO images (src, description) VALUES ('chocolatecake1.jpg', 'Les trois chocolats'), ('chocolatecake2.jpg', 'Le chocolat dans tous ses états'), ('chocolatecake3.jpg', 'Le chocolat gourmand'), ('dietcake1.jpg', 'Le délice allégé'), ('dietcake2.jpg', 'Le sans sucre'), ('dietcake3.jpg', 'Petites douceurs légères'), ('fruitcake1.jpg', 'La Tarte aux fruits rouges'), ('fruitcake2.jpg', 'La Tarte à la crème'), ('fruitcake3.jpg', 'La tarte revisité'), ('traditionalcake1.jpg', 'La pâtisserie traditionnelle'), ('traditionalcake2.jpg', 'Les délices du chef'), ('traditionnalcake3.jpg', 'La gourmandise authentique');
 
 INSERT INTO pastries (category_id, image_id, reference, title, sizes, story) VALUES
-    (
-        1,
-        1,
-        'ref disponible en stock',
-        'Les trois chocolats',
-        'part unique',
-        'Pâtisserie composée de chocolat noir exclusivement.'
-    ),
-    (
-        1,
-        2,
-        'ref disponible en stock',
-        'Le chocolat dans tous ses états',
-        'part unique',
-        'Pâtisserie composée de chocolat blanc, noir et au lait associée aux noisettes.'
-    ),
-    (
-        1,
-        3,
-        'ref disponible en stock',
-        'Le chocolat gourmand',
-        'part unique, existe en format 8 parts',
-        'Pâtisserie composée de chocolat aux lait.'
-    ),
-    (
-        2,
-        1,
-        'ref disponible en stock',
-        'Le délice allégé',
-        'part unique, existe en format 8 parts',
-        'Pâtisserie allégé sans gluten.'
-    ),
-    (
-        2,
-        2,
-        'ref disponible en stock',
-        'Le sans sucre',
-        'part unique',
-        'Pâtisserie sans sucre et sans gluten.'
-    ),
-    (
-        2,
-        3,
-        'ref disponible en stock',
-        'Petites douceurs légères',
-        'part unique',
-        'Pâtisserie aux assortiments de douceurs légères.'
-    ),
-     (
-        3,
-        1,
-        'ref disponible en stock',
-        'La Tarte aux fruits rouges',
-        'part unique',
-        'Pâtisserie aux fruits rouges.'
-    ),
-    (
-        3,
-        2,
-        'ref disponible en stock',
-        'La Tarte à la crème',
-        'part unique',
-        'Pâtisserie à la crème de citron et agrumes.'
-    ),
-    (
-        3,
-        3,
-        'ref disponible en stock',
-        'La tarte revisité',
-        'part unique',
-        'Pâtisserie citronée agrémentée de groseilles.'
-    ),
-    (
-        4,
-        1,
-        'ref disponible en stock',
-        'La pâtisserie traditionnelle',
-        'part unique',
-        'Pâtisserie traditionnelle aux saveurs inimitables.'
-    ),
-    (
-        4,
-        2,
-        'ref disponible en stock',
-        'Les délices du chef',
-        'part unique',
-        'Pâtisserie spécialité du chef.'
-    ),
-    (
-        4,
-        3,
-        'ref disponible en stock',
-        'La gourmandise authentique',
-        'part unique',
-        'Pâtisserie authentique revisitée.'
-    );
+    (1, 1, 'ref disponible', 'Les trois chocolats', 'part unique', 'Pâtisserie composée de chocolat noir exclusivement.'),
+    (1, 2, 'ref disponible/en stock', 'Le chocolat dans tous ses états', 'part unique', 'Pâtisserie composée de chocolat blanc, noir et au lait associée aux noisettes.'),
+    (1, 3, 'ref en stock', 'Le chocolat gourmand', 'part unique, existe en format 8 parts', 'Pâtisserie composée de chocolat aux lait.'),
+    (2, 1, 'ref disponible', 'Le délice allégé', 'part unique, existe en format 8 parts', 'Pâtisserie allégé sans gluten.'),
+    (2, 2, 'ref disponible', 'Le sans sucre', 'part unique', 'Pâtisserie sans sucre et sans gluten.'),
+    (2, 3, 'ref disponible/en stock', 'Petites douceurs légères', 'part unique', 'Pâtisserie aux assortiments de douceurs légères.'),
+    (3, 1, 'ref disponible', 'La Tarte aux fruits rouges', 'part unique', 'Pâtisserie aux fruits rouges.'),
+    (3, 2, 'ref en stock', 'La Tarte à la crème', 'part unique', 'Pâtisserie à la crème de citron et agrumes.'),
+    (3, 3, 'ref disponible en stock', 'La tarte revisité', 'part unique', 'Pâtisserie citronée agrémentée de groseilles.'),
+    (4, 1, 'ref disponible en stock', 'La pâtisserie traditionnelle','part unique','Pâtisserie traditionnelle aux saveurs inimitables.'),
+    (4, 2, 'ref disponible/en stock', 'Les délices du chef', 'part unique', 'Pâtisserie spécialité du chef.'),
+    (4, 3, 'ref disponible', 'La gourmandise authentique', 'part unique', 'Pâtisserie authentique revisitée.');
