@@ -50,55 +50,7 @@ INSERT INTO categories (category) VALUES ('Tout chocolat'), ('Diététique'), ('
 
 INSERT INTO users (email, password, firstname, lastname, role) VALUES ('toto.tata@example.com', 'totoettata', 'Toto', 'Tata', 1), ('jo.do@example.com', 'joetdo', 'Jo', 'Do', 0);
 
-INSERT INTO images (src, description) VALUES
-    (
-        'chocolatecake1.jpg',
-        'Les trois chocolats'
-    ),
-    (
-        'chocolatecake2.jpg',
-        'Le chocolat dans tous ses états'
-    ),
-    (
-        'chocolatecake3.jpg',
-        'Le chocolat gourmand'
-    ),
-    (
-        'dietcake1.jpg',
-        'Le délice allégé'
-    ),
-    (
-        'dietcake2.jpg',
-        'Le sans sucre'
-    ),
-    (
-        'dietcake3.jpg',
-        'Petites douceurs légères'
-    ),
-    (
-        'fruitcake1.jpg',
-        'La Tarte aux fruits rouges'
-    ),
-    (
-        'fruitcake2.jpg',
-        'La Tarte à la crème'
-    ),
-    (
-        'fruitcake3.jpg',
-        'La tarte revisité'
-    ), 
-    (
-        'traditionalcake1.jpg',
-        'La pâtisserie traditionnelle'
-    ),
-    (
-        'traditionalcake2.jpg',
-        'Les délices du chef'
-    ),
-    (
-        'traditionnalcake3.jpg',
-        'La gourmandise authentique'
-    );
+INSERT INTO images (src, description) VALUES ('chocolatecake1.jpg', 'Les trois chocolats'), ('chocolatecake2.jpg', 'Le chocolat dans tous ses états'), ('chocolatecake3.jpg', 'Le chocolat gourmand'), ('dietcake1.jpg', 'Le délice allégé'), ('dietcake2.jpg', 'Le sans sucre'), ('dietcake3.jpg', 'Petites douceurs légères'), ('fruitcake1.jpg', 'La Tarte aux fruits rouges'), ('fruitcake2.jpg', 'La Tarte à la crème'), ('fruitcake3.jpg', 'La tarte revisité'), ('traditionalcake1.jpg', 'La pâtisserie traditionnelle'), ('traditionalcake2.jpg', 'Les délices du chef'), ('traditionnalcake3.jpg', 'La gourmandise authentique');
 
 INSERT INTO pastries (category_id, image_id, reference, title, sizes, story) VALUES
     (
@@ -196,4 +148,4 @@ INSERT INTO pastries (category_id, image_id, reference, title, sizes, story) VAL
         'La gourmandise authentique',
         'part unique',
         'Pâtisserie authentique revisitée.'
-    ),
+    );
