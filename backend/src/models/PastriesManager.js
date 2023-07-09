@@ -29,6 +29,7 @@ class PastriesManager extends AbstractManager {
         pastries.title,
         pastries.sizes,
         pastries.story,
+        pastries.id,
       ]
     );
   }
