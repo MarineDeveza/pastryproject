@@ -5,7 +5,6 @@ class PastriesManager extends AbstractManager {
     super({ table: "pastries" });
   }
 
-  // a revoir
   findAllPastries() {
     return this.database.query(
       `SELECT p.id, p.category_id, p.image_id, p.reference, p.title, p.sizes, p.story, c.category, i.src, i.description FROM ${this.table} AS p
@@ -25,7 +24,6 @@ class PastriesManager extends AbstractManager {
       [id]
     );
   }
-  //
 
   insert(pastries) {
     return this.database.query(

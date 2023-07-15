@@ -23,7 +23,7 @@ function PastryCards() {
 
     if (selectedCategory !== "") {
       filtered = filtered.filter(
-        (pastry) => pastry.category_id === selectedCategory
+        (pastry) => pastry.category_id.toString() === selectedCategory
       );
     }
     setFilteredPastries(filtered);
@@ -55,10 +55,10 @@ function PastryCards() {
             onChange={handleCategoryFilter}
           >
             <option value="">Toutes les catégories</option>
-            <option value="chocolatecake">Tout chocolat</option>
-            <option value="dietcake">Diététique</option>
-            <option value="fruitcake">Aux fruits</option>
-            <option value="traditionalcake">Traditionnel</option>
+            <option value="1">Tout chocolat</option>
+            <option value="2">Diététique</option>
+            <option value="3">Aux fruits</option>
+            <option value="4">Traditionnel</option>
           </select>
         </div>
         <div className="cakelist">
