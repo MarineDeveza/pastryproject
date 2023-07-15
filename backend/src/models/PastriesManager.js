@@ -5,6 +5,28 @@ class PastriesManager extends AbstractManager {
     super({ table: "pastries" });
   }
 
+  // a revoir
+  findAllPastries() {
+    return this.database.query(
+      `SELECT p.id, p.category_id, p.image_id, p.reference, p.title, p.sizes, p.story, c.category, i.src, i.description FROM ${this.table} AS p
+      JOIN categories AS c ON p.category_id=c.id
+      JOIN images AS i ON p.image_id=i.id
+      ORDER BY p.id
+      `
+    );
+  }
+
+  find(id) {
+    return this.database.query(
+      `SELECT p.id AS id, category_id, image_id, reference, title, sizes, story, src, description
+      FROM ${this.table} p
+      JOIN images ON images.id = image_id
+      WHERE p.id = ?`,
+      [id]
+    );
+  }
+  //
+
   insert(pastries) {
     return this.database.query(
       `insert into ${this.table} (category_id, image_id, reference, title, sizes, story) values (?, ?, ?, ?, ?, ?)`,
