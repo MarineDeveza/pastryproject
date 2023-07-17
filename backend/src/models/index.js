@@ -31,12 +31,20 @@ const models = {};
 
 const ItemManager = require("./ItemManager");
 const PastriesManager = require("./PastriesManager");
+const CategoriesManager = require("./CategoriesManager");
+const ImagesManager = require("./ImagesManager");
 
 models.item = new ItemManager();
 models.item.setDatabase(pool);
 
 models.pastries = new PastriesManager();
 models.pastries.setDatabase(pool);
+
+models.categories = new CategoriesManager();
+models.categories.setDatabase(pool);
+
+models.images = new ImagesManager();
+models.images.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
