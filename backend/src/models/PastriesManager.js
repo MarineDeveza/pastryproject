@@ -41,7 +41,7 @@ class PastriesManager extends AbstractManager {
 
   update(pastries) {
     return this.database.query(
-      `update ${this.table} set category_id = ?, image_id, reference = ?, title = ?, sizes = ?, story = ? where id = ?`,
+      `update ${this.table} set category_id = ?, image_id = ?, reference = ?, title = ?, sizes = ?, story = ? where id = ?`,
       [
         pastries.category_id,
         pastries.image_id,

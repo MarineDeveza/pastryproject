@@ -8,6 +8,7 @@ import PastryShop from "./pages/PastryShop";
 import PastryLessons from "./pages/PastryLessons";
 import About from "./pages/About";
 import AddPastries from "./components/AddPastries";
+import EditPastries from "./components/EditPastries";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/pastrylessons" element={<PastryLessons />} />
           <Route path="/about" element={<About />} />
           <Route path="/add" element={<AddPastries />} />
+          <Route path="/edit/:id" element={<EditPastries />} />
         </Routes>
         <Footer />
       </Router>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function PastryCards() {
   const [pastries, setPastries] = useState([]);
@@ -77,6 +78,11 @@ function PastryCards() {
                 <p>{pastry.title}</p>
                 <p>{pastry.sizes}</p>
                 <p>{pastry.story}</p>
+                <Link to={`/edit/${pastry.id}`}>
+                  <button type="button" className="modify-button">
+                    Modifier
+                  </button>
+                </Link>
                 <div>
                   <button type="button" onClick={() => handleDelete(pastry.id)}>
                     Supprimer
