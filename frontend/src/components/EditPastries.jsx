@@ -1,9 +1,10 @@
+/* eslint-disable no-shadow */
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-import "../AddPastries.css";
 
-function AddPastries() {
+function EditPastries() {
   const [reference, setReference] = useState("");
   const [title, setTitle] = useState("");
   const [sizes, setSizes] = useState("");
@@ -12,11 +13,12 @@ function AddPastries() {
   const [categories, setCategories] = useState([]);
   const [imageId, setImageId] = useState();
   const [images, setImages] = useState([]);
+  const { id } = useParams();
 
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/pastries`, {
+      .put(`${import.meta.env.VITE_BACKEND_URL}/pastries/${id}`, {
         reference,
         title,
         sizes,
@@ -38,6 +40,30 @@ function AddPastries() {
 
   useEffect(() => {
     axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/pastries/${id}`)
+      .then((res) => {
+        const {
+          reference,
+          title,
+          sizes,
+          story,
+          category_id: categoryId,
+          image_id: imageId,
+        } = res.data;
+        setReference(reference);
+        setTitle(title);
+        setSizes(sizes);
+        setStory(story);
+        setCategoryId(categoryId);
+        setImageId(imageId);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/categories`)
       .then((res) => setCategories(res.data))
       .catch((err) => console.error(err));
@@ -53,7 +79,7 @@ function AddPastries() {
   return (
     <div>
       <div className="create-container">
-        <h1 className="create-title">Ajouter une pâtisserie</h1>
+        <h1 className="create-title">Modifier une pâtisserie</h1>
         <form className="form-container" onSubmit={handleSubmit}>
           <div className="input-container">
             <label htmlFor="reference" className="create-label">
@@ -134,7 +160,7 @@ function AddPastries() {
             </select>
           </div>
           <button className="create-button" type="submit">
-            Ajouter
+            Modifier
           </button>
         </form>
       </div>
@@ -142,4 +168,4 @@ function AddPastries() {
   );
 }
 
-export default AddPastries;
+export default EditPastries;
