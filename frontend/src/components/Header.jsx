@@ -42,6 +42,14 @@ function Header() {
                 À propos/notre univers
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/login"
+                className={location === "/about" ? "navlink active" : "navlink"}
+              >
+                Connexion
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>

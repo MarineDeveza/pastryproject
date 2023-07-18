@@ -6,6 +6,7 @@ const itemControllers = require("./controllers/itemControllers");
 const pastriesControllers = require("./controllers/pastriesControllers");
 const categoriesControllers = require("./controllers/categoriesControllers");
 const imagesControllers = require("./controllers/imagesControllers");
+const usersControllers = require("./controllers/usersControllers");
 
 router.get("/items", itemControllers.browse);
 router.get("/items/:id", itemControllers.read);
@@ -22,5 +23,6 @@ router.delete("/pastries/:id", pastriesControllers.destroy);
 router.get("/categories", categoriesControllers.browse);
 
 router.get("/images", imagesControllers.browse);
+router.post("/login", usersControllers.login);
 
 module.exports = router;
