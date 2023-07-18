@@ -9,6 +9,7 @@ import PastryLessons from "./pages/PastryLessons";
 import About from "./pages/About";
 import AddPastries from "./components/AddPastries";
 import EditPastries from "./components/EditPastries";
+import Login from "./components/Login";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/add" element={<AddPastries />} />
           <Route path="/edit/:id" element={<EditPastries />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </Router>
