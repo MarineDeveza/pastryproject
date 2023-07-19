@@ -36,6 +36,11 @@ function Login() {
         // If error
         .catch((err) => {
           console.error(err);
+          Swal.fire(
+            "Erreur de connexion",
+            "Identifiant et/ou mot de passe incorrect(s)",
+            "error"
+          );
         });
     } else {
       // If fields are empty
@@ -46,6 +51,7 @@ function Login() {
       );
     }
   }
+
   return (
     <div className="login">
       <section>
