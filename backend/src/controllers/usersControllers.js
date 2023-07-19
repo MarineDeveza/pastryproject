@@ -18,9 +18,9 @@ const login = (req, res) => {
           error: "Invalid email",
         });
       } else {
-        const { id } = rows[0];
-
-        if (password) {
+        // if password is not correct
+        const { id, password: dbPassword } = rows[0];
+        if (password === dbPassword) {
           const token = jwt.sign({ id }, process.env.JWT_AUTH_SECRET, {
             expiresIn: "1h",
           });
