@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { UserContext } from "../services/OnlineContext";
+import "../Login.css";
 
 function Login() {
   const [password, setPassword] = useState("");
@@ -51,8 +52,9 @@ function Login() {
         <h1 className="title-login">CONNEXION</h1>
         <form onSubmit={handleSubmit} className="login-form">
           <div className="login-box">
-            <label htmlFor="email">E-mail :</label>
-
+            <label htmlFor="email" className="login-label">
+              E-mail :
+            </label>
             <input
               className="login-input"
               type="text"
@@ -62,7 +64,9 @@ function Login() {
               value={email}
               required
             />
-            <label htmlFor="password">Mot de passe :</label>
+            <label htmlFor="password" className="login-label">
+              Mot de passe :
+            </label>
             <input
               className="login-input"
               type="password"
