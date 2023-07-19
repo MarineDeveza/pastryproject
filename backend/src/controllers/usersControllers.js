@@ -50,6 +50,11 @@ const login = (req, res) => {
     });
 };
 
+const logout = (req, res) => {
+  return res.clearCookie("access_token").sendStatus(200);
+};
+
 module.exports = {
   login,
+  logout,
 };
