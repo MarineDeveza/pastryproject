@@ -24,5 +24,6 @@ router.get("/categories", categoriesControllers.browse);
 
 router.get("/images", imagesControllers.browse);
 router.post("/login", usersControllers.login);
+router.get("/logout", usersControllers.logout);
 
 module.exports = router;

@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { UserContext } from "../services/OnlineContext";
 
 function PastryCards() {
   const [pastries, setPastries] = useState([]);
   const [filteredPastries, setFilteredPastries] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const { isOnline } = useContext(UserContext);
 
   useEffect(() => {
     axios
@@ -78,16 +80,23 @@ function PastryCards() {
                 <p>{pastry.title}</p>
                 <p>{pastry.sizes}</p>
                 <p>{pastry.story}</p>
-                <Link to={`/edit/${pastry.id}`}>
-                  <button type="button" className="modify-button">
-                    Modifier
-                  </button>
-                </Link>
-                <div>
-                  <button type="button" onClick={() => handleDelete(pastry.id)}>
-                    Supprimer
-                  </button>
-                </div>
+                {isOnline && (
+                  <Link to={`/edit/${pastry.id}`}>
+                    <button type="button" className="modify-button">
+                      Modifier
+                    </button>
+                  </Link>
+                )}
+                {isOnline && (
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => handleDelete(pastry.id)}
+                    >
+                      Supprimer
+                    </button>
+                  </div>
+                )}
               </div>
             ))}
         </div>
