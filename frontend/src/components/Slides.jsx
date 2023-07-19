@@ -13,13 +13,7 @@ function Slides() {
     {
       picture: (
         <figure>
-          <img
-            className="imgslide"
-            src={Imagepastryslideone}
-            alt=""
-            // width="1020"
-            // height="500"
-          />
+          <img className="imgslide" src={Imagepastryslideone} alt="" />
           <figcaption>Pâtisseries</figcaption>
         </figure>
       ),
@@ -27,13 +21,7 @@ function Slides() {
     {
       picture: (
         <figure>
-          <img
-            className="imgslide"
-            src={Imagepastryslidetwo}
-            alt=""
-            // width="1020"
-            // height="500"
-          />
+          <img className="imgslide" src={Imagepastryslidetwo} alt="" />
           <figcaption>Cours de pâtisseries</figcaption>
         </figure>
       ),
@@ -41,13 +29,7 @@ function Slides() {
     {
       picture: (
         <figure>
-          <img
-            className="imgslide"
-            src={Imagepastryslidethree}
-            alt=""
-            // width="1020"
-            // height="500"
-          />
+          <img className="imgslide" src={Imagepastryslidethree} alt="" />
           <figcaption>
             Notre univers<em>("La fraise sur le gâteau")</em>
           </figcaption>
@@ -57,13 +39,7 @@ function Slides() {
     {
       picture: (
         <figure>
-          <img
-            className="imgslide"
-            src={Imagepastryslidefour}
-            alt=""
-            // width="640"
-            // height="310"
-          />
+          <img className="imgslide" src={Imagepastryslidefour} alt="" />
           <figcaption>Nouveautés et sélection</figcaption>
         </figure>
       ),
