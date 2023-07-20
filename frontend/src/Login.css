@@ -41,3 +41,14 @@
   outline: none;
   box-shadow: 0 0 5px #ff93b5;
 }
+
+.login-section {
+  border: 1px solid rgb(175, 159, 173);
+  border-radius: 8px;
+  padding: 10px 50px 20px;
+}
+
+.login-section:hover {
+  outline: none;
+  box-shadow: 0 0 10px #ff93b5;
+}
