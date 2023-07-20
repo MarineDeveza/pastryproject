@@ -1,0 +1,97 @@
+.footer {
+  background: rgb(248, 232, 232);
+  color: rgb(61, 54, 60);
+  font-size: small;
+  font-style: italic;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img .logo-sweetdelights {
+  width: 10rem;
+  margin-right: 8rem;
+}
+
+.sweetdelights-infos {
+  padding-left: 3rem;
+}
+
+.footer-image {
+  height: 6rem;
+  width: 8rem;
+}
+
+.footer-links {
+  font-weight: bold;
+}
+
+.footerdetails {
+  padding-left: 10rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+  .footer-top {
+    width: 300px;
+    max-width: 30%;
+  }
+
+  img .logo-sweetdelights {
+    display: none;
+  }
+
+  .footer-image {
+    display: none;
+  }
+
+  .footer,
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    font-size: 0.7rem;
+  }
+
+  .footerdetails {
+    padding-left: 2rem;
+    font-size: smaller;
+  }
+
+  .footer-links {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    width: 700px;
+    max-width: 50%;
+  }
+
+  img .logo-sweetdelights {
+    display: none;
+  }
+  .footer-image {
+    display: none;
+  }
+
+  .footer,
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    font-size: 0.7rem;
+  }
+
+  .footerdetails {
+    font-size: smaller;
+  }
+}
