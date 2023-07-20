@@ -3,7 +3,7 @@
   flex-direction: row;
   gap: 5rem;
   margin: 2rem;
-  /* align-items: center; */
+  align-items: center;
 }
 
 h1,
@@ -30,4 +30,40 @@ h2 {
 
 .img-cakedecorationbis {
   opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .about-lessons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .img-cakedecorationbis,
+  .img-cakedecoration {
+    margin-top: -1rem;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .img-pastryleader,
+  .img-pastryshop {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-lessons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .img-cakedecorationbis,
+  .img-cakedecoration {
+    margin-top: -1rem;
+    max-width: 90%;
+    max-height: 90%;
+  }
 }

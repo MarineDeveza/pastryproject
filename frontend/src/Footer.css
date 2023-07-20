@@ -37,3 +37,61 @@ img .logo-sweetdelights {
   padding-left: 10rem;
   padding-bottom: 1rem;
 }
+
+@media (max-width: 480px) {
+  .footer-top {
+    width: 300px;
+    max-width: 30%;
+  }
+
+  img .logo-sweetdelights {
+    display: none;
+  }
+
+  .footer-image {
+    display: none;
+  }
+
+  .footer,
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    font-size: 0.7rem;
+  }
+
+  .footerdetails {
+    padding-left: 2rem;
+    font-size: smaller;
+  }
+
+  .footer-links {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    width: 700px;
+    max-width: 50%;
+  }
+
+  img .logo-sweetdelights {
+    display: none;
+  }
+  .footer-image {
+    display: none;
+  }
+
+  .footer,
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    font-size: 0.7rem;
+  }
+
+  .footerdetails {
+    font-size: smaller;
+  }
+}

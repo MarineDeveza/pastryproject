@@ -54,7 +54,7 @@ function Login() {
 
   return (
     <div className="login">
-      <section>
+      <section className="login-section">
         <h1 className="title-login">CONNEXION</h1>
         <form onSubmit={handleSubmit} className="login-form">
           <div className="login-box">

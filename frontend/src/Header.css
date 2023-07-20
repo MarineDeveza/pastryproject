@@ -38,3 +38,47 @@ a {
   font-style: italic;
   margin-top: -5rem;
 }
+
+li a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+li a:hover:after {
+  width: 90%;
+  background: #444;
+  box-shadow: 0 0 5px #e8376f;
+}
+
+@media (max-width: 480px) {
+  .slogan {
+    width: 300px;
+    max-width: 50%;
+    font-size: 15px;
+    margin-top: -8rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan {
+    font-size: 15px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
