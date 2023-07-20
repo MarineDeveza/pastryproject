@@ -77,3 +77,37 @@ figcaption {
 .slideshowDot.active {
   background-color: rgb(225, 164, 164);
 }
+
+@media (max-width: 480px) {
+  .slideshow {
+    width: 300px;
+    max-width: 50%;
+  }
+
+  .imgslide {
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+  }
+
+  .imgslideem {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .slideshow {
+    width: 700px;
+    max-width: 50%;
+  }
+
+  .imgslide {
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+  }
+
+  .imgslideem {
+    display: none;
+  }
+}

@@ -16,8 +16,8 @@ function PastryLessons() {
         />
         <div className="boxabout-container">
           <p>
-            Que ce soient des gâteaux, biscuits, macarons ou cakes , Sweet vous
-            apprends des desserts délicieux et faciles ! <br />
+            Que ce soient des gâteaux, biscuits, macarons ou cakes, Sweet vous
+            apprend des desserts délicieux et faciles ! <br />
             Qui ne craquerait pas pour ces merveilles de la pâtisserie...
           </p>
           <p>Pensez à réserver votre place pour ce moment de convivialité !</p>

@@ -16,8 +16,8 @@ function About() {
         <div className="boxabout-container">
           <p>
             Sweet Delights propose des pâtisseries aussi bien traditionnelles
-            que dans l’air du temps. Toutes ces créations aspirent/tendent à
-            être à la fois gustatives et visuellement élégantes.
+            que dans l’air du temps. Toutes ces créations tendent à être à la
+            fois gustatives et visuellement élégantes.
           </p>
           <p>
             Ses pâtisseries sont confectionnées avec le plus grand soin par nos

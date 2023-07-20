@@ -31,7 +31,8 @@ function Slides() {
         <figure>
           <img className="imgslide" src={Imagepastryslidethree} alt="" />
           <figcaption>
-            Notre univers<em>("La fraise sur le gâteau")</em>
+            Notre univers
+            <em className="imgslideem">("La fraise sur le gâteau")</em>
           </figcaption>
         </figure>
       ),

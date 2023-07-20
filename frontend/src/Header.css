@@ -38,3 +38,32 @@ a {
   font-style: italic;
   margin-top: -5rem;
 }
+
+@media (max-width: 480px) {
+  .slogan {
+    width: 300px;
+    max-width: 50%;
+    font-size: 15px;
+    margin-top: -8rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan {
+    font-size: 15px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
