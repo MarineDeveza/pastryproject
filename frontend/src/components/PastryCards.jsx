@@ -80,23 +80,26 @@ function PastryCards() {
                 <p>{pastry.title}</p>
                 <p>{pastry.sizes}</p>
                 <p>{pastry.story}</p>
-                {isOnline && (
-                  <Link to={`/edit/${pastry.id}`}>
-                    <button type="button" className="modify-button">
-                      Modifier
-                    </button>
-                  </Link>
-                )}
-                {isOnline && (
-                  <div>
-                    <button
-                      type="button"
-                      onClick={() => handleDelete(pastry.id)}
-                    >
-                      Supprimer
-                    </button>
-                  </div>
-                )}
+                <div className="buttoncard-modifydelete">
+                  {isOnline && (
+                    <Link to={`/edit/${pastry.id}`}>
+                      <button type="button" className="modify-button">
+                        Modifier
+                      </button>
+                    </Link>
+                  )}
+                  {isOnline && (
+                    <div>
+                      <button
+                        type="button"
+                        className="delete-button"
+                        onClick={() => handleDelete(pastry.id)}
+                      >
+                        Supprimer
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
         </div>
