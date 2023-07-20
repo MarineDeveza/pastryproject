@@ -4,6 +4,8 @@
   align-items: center;
   flex-direction: column;
   padding: 4rem;
+  background-image: url("./assets/imagebackgroundlogin.jpg");
+  background-size: contain;
 }
 
 .login-form {
@@ -26,6 +28,7 @@
   color: rgb(61, 54, 60);
   margin-bottom: 5px;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .login-input {
@@ -46,9 +49,21 @@
   border: 1px solid rgb(175, 159, 173);
   border-radius: 8px;
   padding: 10px 50px 20px;
+  background: white;
 }
 
 .login-section:hover {
   outline: none;
   box-shadow: 0 0 10px #ff93b5;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-button {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }

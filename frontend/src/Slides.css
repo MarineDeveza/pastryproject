@@ -95,7 +95,7 @@ figcaption {
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 768px) {
   .slideshow {
     width: 700px;
     max-width: 50%;

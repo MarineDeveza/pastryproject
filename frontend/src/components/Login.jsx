@@ -81,11 +81,14 @@ function Login() {
               value={password}
               required
             />
+            <button
+              className="login-button"
+              type="button"
+              onClick={handleSubmit}
+            >
+              CONNEXION
+            </button>
           </div>
-
-          <button className="login-button" type="button" onClick={handleSubmit}>
-            CONNEXION
-          </button>
         </form>
       </section>
     </div>
