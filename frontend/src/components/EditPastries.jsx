@@ -159,7 +159,7 @@ function EditPastries() {
               ))}
             </select>
           </div>
-          <button className="create-button" type="submit">
+          <button className="all-button" type="submit">
             Modifier
           </button>
         </form>
