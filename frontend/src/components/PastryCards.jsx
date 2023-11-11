@@ -83,7 +83,7 @@ function PastryCards() {
                 <div className="buttoncard-modifydelete">
                   {isOnline && (
                     <Link to={`/edit/${pastry.id}`}>
-                      <button type="button" className="modify-button">
+                      <button type="button" className="all-button">
                         Modifier
                       </button>
                     </Link>
@@ -92,7 +92,8 @@ function PastryCards() {
                     <div>
                       <button
                         type="button"
-                        className="delete-button"
+                        className="all-button"
+                        id="delete-button"
                         onClick={() => handleDelete(pastry.id)}
                       >
                         Supprimer

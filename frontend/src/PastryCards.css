@@ -49,7 +49,7 @@ span {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.modify-button {
+button {
   color: white;
   background-color: lightcoral;
   border: 3px solid lightcoral;
@@ -60,7 +60,7 @@ span {
   cursor: pointer;
 }
 
-.modify-button:hover {
+.all-button:hover {
   color: grey;
   background-color: white;
 }
@@ -71,7 +71,7 @@ span {
   border-radius: 8px;
 }
 
-.delete-button {
+#delete-button {
   background-color: rgb(203, 86, 86);
   border: 3px solid rgb(203, 86, 86);
 }
