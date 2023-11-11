@@ -22,6 +22,9 @@ ul {
   height: 8rem;
   width: 96vw;
   list-style: none;
+}
+
+.navBar {
   border-bottom: 3px solid rgb(61, 54, 60);
   z-index: 1;
 }
@@ -80,5 +83,13 @@ li a:hover:after {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .navBar {
+    border-bottom: 0;
   }
 }

@@ -13,7 +13,7 @@ function Header() {
         </NavLink>
 
         <nav className="bottom-container">
-          <ul>
+          <ul className="navBar">
             <li>
               <NavLink
                 to="/pastryshop"

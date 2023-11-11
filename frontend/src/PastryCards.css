@@ -49,7 +49,7 @@ span {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-button {
+.modify-button {
   color: white;
   background-color: lightcoral;
   border: 3px solid lightcoral;
@@ -60,7 +60,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.modify-button:hover {
   color: grey;
   background-color: white;
 }

@@ -13,6 +13,7 @@ import EditPastries from "./components/EditPastries";
 import UserIsOnlineContext from "./services/OnlineContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Burger from "./components/Burger";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <UserIsOnlineContext>
         <Router>
           <Header />
+          <Burger />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pastryshop" element={<PastryShop />} />
