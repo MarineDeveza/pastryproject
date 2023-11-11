@@ -133,7 +133,7 @@ function AddPastries() {
               ))}
             </select>
           </div>
-          <button className="create-button" type="submit">
+          <button className="all-button" type="submit">
             Ajouter
           </button>
         </form>

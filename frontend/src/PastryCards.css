@@ -60,7 +60,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.all-button:hover {
   color: grey;
   background-color: white;
 }
@@ -71,7 +71,7 @@ button:hover {
   border-radius: 8px;
 }
 
-.delete-button {
+#delete-button {
   background-color: rgb(203, 86, 86);
   border: 3px solid rgb(203, 86, 86);
 }
