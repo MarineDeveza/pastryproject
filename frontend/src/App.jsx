@@ -14,6 +14,7 @@ import UserIsOnlineContext from "./services/OnlineContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Burger from "./components/Burger";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/edit/:id" element={<EditPastries />} />
             <Route path="/login" element={<Account />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/login/register" element={<Register />} />
           </Routes>
           <Footer />
         </Router>

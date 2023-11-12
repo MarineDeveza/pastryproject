@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { UserContext } from "../services/OnlineContext";
 import "../Login.css";
@@ -38,16 +38,14 @@ function Login() {
           console.error(err);
           Swal.fire(
             "Erreur de connexion",
-            "Identifiant et/ou mot de passe incorrect(s)",
-            "error"
+            "Identifiant et/ou mot de passe incorrect(s)"
           );
         });
     } else {
       // If fields are empty
       Swal.fire(
         "Erreur de connexion",
-        "Pour vous connecter, merci de renseigner votre identifiant et votre mot de passe",
-        "error"
+        "Pour vous connecter, merci de renseigner votre identifiant et votre mot de passe"
       );
     }
   }
@@ -91,6 +89,7 @@ function Login() {
           </div>
         </form>
       </section>
+      <Link to="register">Créer un compte</Link>
     </div>
   );
 }

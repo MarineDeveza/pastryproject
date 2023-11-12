@@ -1,5 +1,39 @@
 const jwt = require("jsonwebtoken");
+const argon2 = require("argon2");
 const models = require("../models");
+
+const register = async (req, res) => {
+  const { email, password, firstname, lastname } = req.body;
+
+  if (!email || !password || !firstname || !lastname) {
+    res.status(400).send("Please specify all");
+    return;
+  }
+
+  try {
+    const dbPassword = await argon2.hash(password);
+
+    models.users
+      .insert({
+        email,
+        password: dbPassword,
+        firstname,
+        lastname,
+      })
+      .then(([result]) => {
+        res.status(201).send({ ...result, id: result.insertId });
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({
+      error: "error",
+    });
+  }
+};
 
 let serverToken;
 const login = (req, res) => {
@@ -21,7 +55,7 @@ const login = (req, res) => {
       } else {
         // if password is not correct
         const { id, password: dbPassword, role } = rows[0];
-        if (password === dbPassword) {
+        if (await argon2.verify(dbPassword, password)) {
           const token = jwt.sign({ id, role }, process.env.JWT_AUTH_SECRET, {
             expiresIn: "1h",
           });
@@ -58,7 +92,6 @@ const logout = (req, res) => {
 };
 
 const authorization = (req, res, next) => {
-  // const token = req.cookies.access_token;
   const token = serverToken;
   if (!token) {
     return res.sendStatus(401);
@@ -83,6 +116,7 @@ const isAdmin = (req, res, next) => {
 };
 
 module.exports = {
+  register,
   login,
   logout,
   authorization,
