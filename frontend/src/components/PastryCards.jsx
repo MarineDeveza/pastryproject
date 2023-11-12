@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { UserContext } from "../services/OnlineContext";
 
 function PastryCards() {
@@ -39,6 +40,16 @@ function PastryCards() {
         setPastries((prevPastries) =>
           prevPastries.filter((cake) => cake.id !== cakeId)
         );
+      })
+      .then(() => {
+        Swal.fire({
+          title: "Confirmation",
+          text: "Votre produit a été supprimé avec succès !",
+        }).then(() => window.location.reload());
+      })
+      .catch((err) => {
+        console.error(err);
+        Swal.fire("Erreur", "Suppression annulée");
       });
   };
 

@@ -89,7 +89,9 @@ function Login() {
           </div>
         </form>
       </section>
-      <Link to="register">Créer un compte</Link>
+      <Link className="account-create" to="register">
+        Créer un compte
+      </Link>
     </div>
   );
 }

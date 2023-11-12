@@ -26,13 +26,13 @@ function AddPastries() {
       })
       .then(() => {
         Swal.fire({
-          icon: "success",
           title: "Confirmation",
           text: "Votre produit a été enregistré avec succès !",
         }).then(() => window.location.reload());
       })
       .catch((err) => {
         console.error(err);
+        Swal.fire("Erreur", "Votre produit n'a pas été enregistré");
       });
   }
 
