@@ -48,7 +48,7 @@ CREATE TABLE favourites (
 
 INSERT INTO categories (category) VALUES ('Tout chocolat'), ('Diététique'), ('Aux fruits'), ('Traditionnel'); 
 
-INSERT INTO users (email, password, firstname, lastname, role) VALUES ('toto.tata@example.com', 'totoettata', 'Toto', 'Tata', 1), ('jo.do@example.com', 'joetdo', 'Jo', 'Do', 0);
+INSERT INTO users (email, password, firstname, lastname, role) VALUES ('p.martin@exemple.com', '$argon2id$v=19$m=65536,t=3,p=4$S7YA4XkGAEdGzBz1IJ3i0Q$6fnWCs/tF4iLT7k8LkQlZcxNpYIp9bGV31xsZJtKrZE', 'Pierre', 'MARTIN', 1), ('jo.do@example.com', 'joetdo', 'Jo', 'Do', 0);
 
 INSERT INTO images (src, description) VALUES ('chocolatecake1.jpg', 'Les trois chocolats'), ('chocolatecake2.jpg', 'Le chocolat dans tous ses états'), ('chocolatecake3.jpg', 'Le chocolat gourmand'), ('dietcake1.jpg', 'Le délice allégé'), ('dietcake2.jpg', 'Le sans sucre'), ('dietcake3.jpg', 'Petites douceurs légères'), ('fruitcake1.jpg', 'La Tarte aux fruits rouges'), ('fruitcake2.jpg', 'La Tarte à la crème'), ('fruitcake3.jpg', 'La tarte revisité'), ('traditionalcake1.jpg', 'La pâtisserie traditionnelle'), ('traditionalcake2.jpg', 'Les délices du chef'), ('traditionalcake3.jpg', 'La gourmandise authentique');
 

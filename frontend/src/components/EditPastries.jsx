@@ -28,9 +28,8 @@ function EditPastries() {
       })
       .then(() => {
         Swal.fire({
-          icon: "success",
           title: "Confirmation",
-          text: "Votre produit a été enregistré avec succès !",
+          text: "Votre produit a été modifié avec succès !",
         }).then(() => window.location.reload());
       })
       .catch((err) => {
@@ -59,6 +58,10 @@ function EditPastries() {
       })
       .catch((err) => {
         console.error(err);
+        Swal.fire(
+          "Erreur",
+          "La modification n'a pas été prise en compte, veuillez recommancer"
+        );
       });
   }, []);
 

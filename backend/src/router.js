@@ -30,6 +30,7 @@ router.get("/categories", categoriesControllers.browse);
 
 router.get("/images", imagesControllers.browse);
 router.post("/login", usersControllers.login);
+router.post("/register", usersControllers.register);
 router.get("/logout", authorization, usersControllers.logout);
 
 module.exports = router;
