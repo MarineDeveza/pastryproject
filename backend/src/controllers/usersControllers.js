@@ -12,7 +12,7 @@ const register = async (req, res) => {
 
   try {
     const dbPassword = await argon2.hash(password);
-
+    // console.log(dbPassword)
     models.users
       .insert({
         email,
@@ -36,6 +36,7 @@ const register = async (req, res) => {
 };
 
 let serverToken;
+
 const login = (req, res) => {
   const { email, password } = req.body;
   // if email or password field is empty
@@ -53,7 +54,7 @@ const login = (req, res) => {
           error: "Invalid email",
         });
       } else {
-        // if password is not correct
+        // if password is correct
         const { id, password: dbPassword, role } = rows[0];
         if (await argon2.verify(dbPassword, password)) {
           const token = jwt.sign({ id, role }, process.env.JWT_AUTH_SECRET, {

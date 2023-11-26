@@ -34,6 +34,7 @@ function EditPastries() {
       })
       .catch((err) => {
         console.error(err);
+        Swal.fire("Erreur", "Votre produit n'a pas été modifié");
       });
   }
 
