@@ -41,7 +41,7 @@ function Register() {
   };
   return (
     <div className="login">
-      <form className="login-section" onSubmit={handleSubmit(onSubmit)}>
+      <form className="register-section" onSubmit={handleSubmit(onSubmit)}>
         <h1 className="title-login">CREER UN COMPTE</h1>
         <div className="box-form">
           <label htmlFor="email" className="login-label">

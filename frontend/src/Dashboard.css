@@ -47,4 +47,9 @@ li a:hover:after {
   .dashboard-container {
     background-image: none;
   }
+
+  .dashboard-list {
+    width: 15rem;
+    align-items: stretch;
+  }
 }
