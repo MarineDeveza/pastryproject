@@ -20,7 +20,6 @@ function Logout() {
       })
       .then(() => {
         Swal.fire({
-          icon: "success",
           title: "Confirmation",
           text: "Déconnexion réussie.",
         });
