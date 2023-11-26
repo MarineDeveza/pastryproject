@@ -52,6 +52,13 @@
   background: white;
 }
 
+.register-section {
+  border: 1px solid rgb(175, 159, 173);
+  border-radius: 8px;
+  padding: 10px 50px 20px;
+  background: white;
+}
+
 .login-section:hover {
   outline: none;
   box-shadow: 0 0 10px #ff93b5;
@@ -77,4 +84,10 @@
   font-size: larger;
   margin-top: 2rem;
   text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-section {
+    padding: 0;
+  }
 }
